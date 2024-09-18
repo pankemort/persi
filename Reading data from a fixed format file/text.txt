@@ -1,0 +1,4 @@
+science expo,exhibiting different projects,exhibition,john
+fashion show,introducing new fashion trends,event,henry
+utility fair,sales of household utilities,fair,john
+gardening expo,new advanced technologies for gardening,exhibition,kenny
