@@ -1,55 +1,54 @@
 #!/bin/bash
 
-# Function to convert all text in input1.txt to uppercase
-convert_to_uppercase() {
-    tr '[:lower:]' '[:upper:]' < input1.txt > temp.txt && mv temp.txt input1.txt
-    echo "All text in input1.txt converted to uppercase."
+# Function to check if a number is prime
+is_prime() {
+    local num=$1
+    if ((num <= 1)); then
+        echo "$num is not a prime number"
+        return
+    fi
+    for ((i = 2; i * i <= num; i++)); do
+        if ((num % i == 0)); then
+            echo "$num is not a prime number"
+            return
+        fi
+    done
+    echo "$num is a prime number"
 }
 
-# Function to calculate the number of words in input1.txt
-count_words() {
-    word_count=$(wc -w < input1.txt)
-    echo "Number of words in input1.txt: $word_count"
-}
-
-# Function to find and display the longest line in input1.txt
-find_longest_line() {
-    longest_line=$(awk 'length > max_length { max_length = length; longest = $0 } END { print longest }' input1.txt)
-    echo "Longest line in input1.txt: $longest_line"
-}
-
-# Function to merge input1.txt and input2.txt line by line
-merge_files() {
-    paste -d'\n' input1.txt input2.txt > merged.txt
-    echo "Files input1.txt and input2.txt merged line by line into merged.txt."
+# Function to calculate the sum of digits of a number
+sum_of_digits() {
+    local num=$1
+    local sum=0
+    while ((num > 0)); do
+        sum=$((sum + num % 10))
+        num=$((num / 10))
+    done
+    echo "Sum of digits is $sum"
 }
 
 # Display menu and handle user choice
-echo "1. Convert all text to uppercase in a file"
-echo "2. Calculate the number of words in a file"
-echo "3. Find the longest line in a file"
-echo "4. Merge two files line by line"
-echo "5. Exit"
-echo -n "Enter your Choice(1-5): "
+echo "1. Check if a number is prime"
+echo "2. Sum of digits"
+echo "3. Exit"
+echo -n "Enter your Choice(1-3): "
 read choice
 
 case $choice in
     1)
-        convert_to_uppercase
+        echo -n "Enter the number: "
+        read num
+        is_prime $num
         ;;
     2)
-        count_words
+        echo -n "Enter the number: "
+        read num
+        sum_of_digits $num
         ;;
     3)
-        find_longest_line
-        ;;
-    4)
-        merge_files
-        ;;
-    5)
-        echo "Exiting..."
+        echo "Exiting"
         ;;
     *)
-        echo "Invalid choice. Please enter a number between 1 and 5."
+        echo "Invalid choice. Please enter a number between 1 and 3."
         ;;
 esac
