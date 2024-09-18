@@ -1,0 +1,86 @@
+
+Reading datas from a file
+
+The Manager of an event management company wants a computerised system to maintain list of all the events and search any event using name of the event organiser. The event details are stored in a file in comma separated format. Use file handeling to read data from file and store it in a list.
+
+Write a c++ program to read a fixed format file in a class and display the details.
+
+Strictly adhere to the Object Oriented Specifications given in the problem statement. All class names, member variable names and function names should be the same as specified in the problem statement. File names used should be same as mentioned in the problem description.
+
+Create a class named Event with the following private member variables
+ 
+Data type	Variable name
+string	name
+string	detail
+string	type
+string	organiser
+Include appropriate constructors, setters and getters for the above class.
+
+Create another class named EventBO with the following member functions
+
+ 
+Method name	Description
+list<Event> readEventlist(ifstream& file)	This function accepts the file object and is used to read the comma separated values from the file and parse them.
+list<Event> searchEventlist(list<Event> list2,string organiser)	This function accepts event list and name of organiser to be searched. It returns the list containing event details organised by that particular organiser.
+Create an Event class object in the above class to parse the input from the file.
+
+Create a driver class named main. In the main method, open the file named "text.txt" that has input and pass the file object to the corresponding member function. Also print the string "Enter the organiser name:" and get the input from the user, then create an object for the class and display the event details.
+
+Input and Output format:
+Refer sample input and output for formatting specifications. To display the event details in the console use "%-20s%-50s%-20s\n" format.
+
+Sample Input and Output:
+
+Sample Input file:(text.txt)
+
+ Information are in the CSV format.
+
+Sample output in console:
+Enter the organiser name:
+john
+For organiser john, the list of events are:
+EVENT NAME                   EVENT DETAIL                            EVENT TYPE
+science expo              exhibiting different projects                     exhibition
+utility fair                   sales of household utilities                      fairReading datas from a file
+
+The Manager of an event management company wants a computerised system to maintain list of all the events and search any event using name of the event organiser. The event details are stored in a file in comma separated format. Use file handeling to read data from file and store it in a list.
+
+Write a c++ program to read a fixed format file in a class and display the details.
+
+Strictly adhere to the Object Oriented Specifications given in the problem statement. All class names, member variable names and function names should be the same as specified in the problem statement. File names used should be same as mentioned in the problem description.
+
+Create a class named Event with the following private member variables
+ 
+Data type	Variable name
+string	name
+string	detail
+string	type
+string	organiser
+Include appropriate constructors, setters and getters for the above class.
+
+Create another class named EventBO with the following member functions
+
+ 
+Method name	Description
+list<Event> readEventlist(ifstream& file)	This function accepts the file object and is used to read the comma separated values from the file and parse them.
+list<Event> searchEventlist(list<Event> list2,string organiser)	This function accepts event list and name of organiser to be searched. It returns the list containing event details organised by that particular organiser.
+Create an Event class object in the above class to parse the input from the file.
+
+Create a driver class named main. In the main method, open the file named "text.txt" that has input and pass the file object to the corresponding member function. Also print the string "Enter the organiser name:" and get the input from the user, then create an object for the class and display the event details.
+
+Input and Output format:
+Refer sample input and output for formatting specifications. To display the event details in the console use "%-20s%-50s%-20s\n" format.
+
+Sample Input and Output:
+
+Sample Input file:(text.txt)
+
+ Information are in the CSV format.
+
+Sample output in console:
+Enter the organiser name:
+john
+For organiser john, the list of events are:
+EVENT NAME                   EVENT DETAIL                            EVENT TYPE
+science expo              exhibiting different projects                     exhibition
+utility fair                   sales of household utilities                      fair
