@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "login,jsx": "javascriptreact",
+        "sstream": "cpp"
+    }
+}
