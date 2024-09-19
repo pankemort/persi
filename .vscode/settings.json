@@ -1,11 +1,12 @@
 {
     "files.associations": {
-        "*.embeddedhtml": "html",
         "login,jsx": "javascriptreact",
+        "*.embeddedhtml": "html",
         "sstream": "cpp",
         "xstring": "cpp",
         "map": "cpp",
         "xtree": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "ostream": "cpp"
     }
 }
