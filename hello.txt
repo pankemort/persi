@@ -1,2 +1,127 @@
-added 2nd q
-wht hpnd
+Write a program to perform below operations.
+i. Uppercasing first letter of each word
+ii. Count the number of lines in the file
+iii. Count the number of characters in the file
+iv. Count the number of vowels in the file
+v. Count the number of special characters in the file[‘@’, ‘$’, ‘!’, ‘,’, ‘.’]
+vi. Length of the longest word
+vii. Length of the shortest word
+
+Note: The file name should be ‘input.txt’
+No need to create any input.txt file in your local machine. It is already there in the EBox environment
+Do not modify the template code.
+
+Function Specifications:
+uppercase_first_letter(): This function uppercases the first letter of each word in input.txt and displays the result.
+count_lines(): This function returns and displays the total number of lines in input.txt.
+count_characters(): This function returns and displays the total number of characters in input.txt.
+count_vowels(): This function returns and displays the total number of vowels (a, e, i, o, u) in input.txt.
+count_special_characters(): This function returns and displays the total number of special characters (@, $, !, ,, .) in input.txt.
+longest_word_length(): This function returns and displays the length of the longest word in input.txt.
+shortest_word_length(): This function returns and displays the length of the shortest word in input.txt.
+
+Input Format: 
+
+Give the input as a file which contains a paragraph.
+
+Output Format:
+
+Display the output in the console.
+[All text in bold corresponds to input and the rest corresponds to output.]
+
+Sample Input File: (input.txt)
+You greet with present Grace, and great prediction$
+And say, which Graine@ will grow, and which will not
+
+Sample Output 1:
+1. Uppercasing first letter of each word
+2. Count the number of lines in the file
+3. Count the number of characters in the file
+4. Count the number of vowels in the file
+5. Count the number of special characters (@, $, !, ,, .)
+6. Length of the longest word
+7. Length of the shortest word
+8. Exit
+Enter your choice (1-8):
+1
+Uppercasing the first letter of each word:
+You Greet With Present Grace, And Great Prediction$
+And Say, Which Graine@ Will Grow, And Which Will Not
+
+Sample Output 2:
+1. Uppercasing first letter of each word
+2. Count the number of lines in the file
+3. Count the number of characters in the file
+4. Count the number of vowels in the file
+5. Count the number of special characters (@, $, !, ,, .)
+6. Length of the longest word
+7. Length of the shortest word
+8. Exit
+Enter your choice (1-8):
+2
+Number of lines in the file: 2
+
+Sample Output 3:
+1. Uppercasing first letter of each word
+2. Count the number of lines in the file
+3. Count the number of characters in the file
+4. Count the number of vowels in the file
+5. Count the number of special characters (@, $, !, ,, .)
+6. Length of the longest word
+7. Length of the shortest word
+8. Exit
+Enter your choice (1-8):
+3
+Number of characters in the file: 104
+
+Sample Output 4:
+1. Uppercasing first letter of each word
+2. Count the number of lines in the file
+3. Count the number of characters in the file
+4. Count the number of vowels in the file
+5. Count the number of special characters (@, $, !, ,, .)
+6. Length of the longest word
+7. Length of the shortest word
+8. Exit
+Enter your choice (1-8):
+4
+Number of vowels in the file: 28
+
+Sample Output 5:
+1. Uppercasing first letter of each word
+2. Count the number of lines in the file
+3. Count the number of characters in the file
+4. Count the number of vowels in the file
+5. Count the number of special characters (@, $, !, ,, .)
+6. Length of the longest word
+7. Length of the shortest word
+8. Exit
+Enter your choice (1-8):
+5
+Number of special characters (@, $, !, ,, .): 5
+
+Sample Output 6:
+1. Uppercasing first letter of each word
+2. Count the number of lines in the file
+3. Count the number of characters in the file
+4. Count the number of vowels in the file
+5. Count the number of special characters (@, $, !, ,, .)
+6. Length of the longest word
+7. Length of the shortest word
+8. Exit
+Enter your choice (1-8):
+6
+Length of the longest word: 12
+
+Sample Output 7:
+1. Uppercasing first letter of each word
+2. Count the number of lines in the file
+3. Count the number of characters in the file
+4. Count the number of vowels in the file
+5. Count the number of special characters (@, $, !, ,, .)
+6. Length of the longest word
+7. Length of the shortest word
+8. Exit
+Enter your choice (1-8):
+7
+Length of the shortest word: 3
