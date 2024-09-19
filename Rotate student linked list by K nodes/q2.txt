@@ -1,0 +1,141 @@
+Write a program to rotate the list by k nodes.
+
+Define a structure
+struct student
+{
+  int id;
+  char name[10];
+  char gender[10];
+  struct student * link;
+};
+
+Function specifications:
+
+void append(struct student new_student) – To add details of the student to the end of the linked list
+void display(struct student *s) – To display all the student details in the linked list
+void rotate(int k) – To rotate the list by k nodes.
+[Note: Give spacing "%4s", "%10s", "%7s"  for "ID","Name","Gender" respectively]
+
+Input and Output Format:
+Refer sample input and output for formatting specifications.
+
+[All text in bold corresponds to input and the rest corresponds to output.]
+
+Sample Input and Output 1:
+
+Enter the id
+1
+Enter the name
+Arithika
+Enter the gender
+Female
+Do you want to add details of another student? Type Yes/No
+Yes
+Enter the id
+2
+Enter the name
+Arun
+Enter the gender
+Male
+Do you want to add details of another student? Type Yes/No
+Yes
+Enter the id
+3
+Enter the name
+Priya
+Enter the gender
+Female
+Do you want to add details of another student? Type Yes/No
+Yes
+Enter the id
+4
+Enter the name
+Thanu
+Enter the gender
+Female
+Do you want to add details of another student? Type Yes/No
+Yes
+Enter the id
+5
+Enter the name
+Yazhini
+Enter the gender
+Female
+Do you want to add details of another student? Type Yes/No
+No
+The details of the students are
+  ID       Name  Gender
+   1   Arithika  Female
+   2       Arun    Male
+   3      Priya  Female
+   4      Thanu  Female
+   5    Yazhini  Female
+Enter the value of k to rotate
+3
+The details of the students after rotating are
+  ID       Name  Gender
+   4      Thanu  Female
+   5    Yazhini  Female
+   1   Arithika  Female
+   2       Arun    Male
+   3      Priya  Female
+
+
+Sample Input and Output 2:
+
+Enter the id
+1
+Enter the name
+Anjana
+Enter the gender
+Female
+Do you want to add details of another student? Type Yes/No
+Yes
+Enter the id
+2
+Enter the name
+Akash
+Enter the gender
+Male
+Do you want to add details of another student? Type Yes/No
+Yes
+Enter the id
+3
+Enter the name
+Rohit
+Enter the gender
+Male
+Do you want to add details of another student? Type Yes/No
+Yes
+Enter the id
+4
+Enter the name
+Shilpa
+Enter the gender
+Female
+Do you want to add details of another student? Type Yes/No
+Yes
+Enter the id
+5
+Enter the name
+Swathy
+Enter the gender
+Female
+Do you want to add details of another student? Type Yes/No
+No
+The details of the students are
+  ID       Name  Gender
+   1     Anjana  Female
+   2      Akash    Male
+   3      Rohit    Male
+   4     Shilpa  Female
+   5     Swathy  Female
+Enter the value of k to rotate
+1
+The details of the students after rotating are
+  ID       Name  Gender
+   2      Akash    Male
+   3      Rohit    Male
+   4     Shilpa  Female
+   5     Swathy  Female
+   1     Anjana  Female
