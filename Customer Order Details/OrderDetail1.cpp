@@ -3,7 +3,7 @@
 OrderDetail::OrderDetail() {}
 
 OrderDetail::OrderDetail(int id, string name, string contactNo, string orderedDate, string deliveryDate, int costPerMonth, vector<Product> productDetails)
-    : id(id), name(name), contactNo(contactNo), orderedDate(orderedDate), deliveryDate(deliveryDate), costPerMonth(costPerMonth), productDetails(productDetails) {}
+    : id(id), name(name), contactNo(contactNo), orderedstring(orderedDate), deliverystring(deliveryDate), costPerMonth(costPerMonth), productDetails(productDetails) {}
 
 int OrderDetail::getId() {
     return id;
@@ -61,3 +61,22 @@ void OrderDetail::setProductDetails(vector<Product> productDetails) {
     this->productDetails = productDetails;
 }
 
+map<string, vector<OrderDetail>> OrderDetail::getCustomerOrderMap(vector<OrderDetail> orderVector) {
+    map<string, vector<OrderDetail>> customerOrderMap;
+    for (auto& order : orderVector) {
+        customerOrderMap[order.getName()].push_back(order);
+    }
+    return customerOrderMap;
+}
+
+void OrderDetail::findCustomer(map<string, vector<OrderDetail>> customerOrderSummaryMap) {
+    string topCustomer;
+    int maxOrders = 0;
+    for (const auto& pair : customerOrderSummaryMap) {
+        if (pair.second.size() > maxOrders) {
+            maxOrders = pair.second.size();
+            topCustomer = pair.first;
+        }
+    }
+    cout << "Customer who placed more number of orders: " << topCustomer << endl;
+}
