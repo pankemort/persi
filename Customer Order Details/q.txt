@@ -1,0 +1,104 @@
+Given the product details, get the customer order history in the console and implement the following functions using it.
+i. Add the product details to the vector
+ii. Display the list of product details
+iii. Display the summary of customer orders
+iv. Display the name of the customer who made more number of orders
+v. Search the product based on rate.
+
+Write a program to perform the above functions.
+The header file Product.h has been created with the following attributes:
+
+DataType	Name
+int	id
+string	name
+string	brand
+string	productType
+string	productCategory
+string	color
+int	rate
+
+The following methods are declared in this file. And also required getters and setters are also declared in this file
+
+Member Functions	Method Description
+Product()	A Default Constructor
+Product(int id, string name, string brand, string productType, string productCategory, string color, int rate)	A Parameterized Constructor
+map<int, Product> getProductMap()	This function is used to create a map with int key values and object data values of Product type.
+void display(map<int, Product> productMap)	This function is used to display the product details in specified format
+void searchProductByRate(map<int, Product> productMap, int searchRate)	
+This function is used to search for a product based on cost and display the searched product details in the following format.
+Display the products with the cost greater or equal to the search cost.
+
+“Product Not Found” should be displayed if the searched product is not found
+
+
+The class Product.cpp has been created. Define all the above member functions inside this class.
+
+The header file OrderDetail.h has been created with the following attributes
+
+DataType	Name
+int	id
+string	name
+string  	contactNo
+string	orderedDate
+string	deliveryDate
+int	costPerMonth
+vector<Product> 	productDetails
+
+The following methods are declared in this file. And also required getters and setters are also declared in this file
+
+Member function	Description
+OrderDetail()	A default constructor
+OrderDetail(int id, string name, string contactNo, string orderedstring, string deliverystring, int costPerMonth, vector<Product> productDetails)	A parameterized constructor
+map<string, vector<OrderDetail> > getCustomerOrderMap(vector<OrderDetail> orderVector)	This function accepts the order details and display the customer order summary in a specified format
+void findCustomer(map<string, vector<OrderDetail>> customerOrderSummaryMap)	This function accepts the customer order summary map as argument and display the name of the customer who made more number of orders.
+
+The class OrderDetail.cpp has been created. Define all the above member functions inside this class.
+
+The class Main has been created and in the main function, read all the inputs, form a customer order summary map and display it.
+
+
+Note :
+1. Below are the product details that need to be added. Do not change these values.
+
+Id	Name	Brand	Product Type	Product Category	Color	Rate
+1	Bosch 6.5Kg Washing Machines	Bosch	Washing Machine	Laundry Room – Appliances	Blue	20000
+2	Lenovo Ideapad Core i3	Philips	Laptop	Conference Room–Electronics	Black	14000
+3	Philips 25-Litre Digital Oven	Philips	Oven	Kitchen - Appliances	Black	6000
+4	Ebony Wardrobe	Philips	Bed	Bedroom - Furniture	Brown	7000
+5	Recliner	Bosch	Living Room - Furniture	Chair	Brown	540
+
+2. Display product details using the below format.
+cout << setw(25) << left << "Name" << setw(25) << left << "Brand" << setw(25) << left << "ProductCategory" << setw(25) << left << "Color" << setw(25) << left << "Cost" << endl
+3. Display the report using the below format
+       cout << "Customer Name" << setw(15) << "No of Orders" << endl
+4. If there is no product with the given search rate, display “No product found with the given rate.”
+
+
+
+Sample Input and Output:
+
+Product Details
+Name                     Brand                    ProductCategory          Color                    Cost                     
+Bosch 6.5Kg Washing MachinesBosch                    Laundry Room - AppliancesBlue                     20000                    
+Lenovo Ideapad Core i3   Philips                   Conference Room-ElectronicsBlack                    14000                    
+Philips 25-Litre Digital OvenPhilips                  Kitchen - Appliances     Black                    6000                     
+Ebony Wardrobe           Philips                  Bedroom - Furniture      Brown                    7000                     
+Recliner                 Bosch                    Chair                    Brown                    540                      
+Number of order details
+3
+Enter Order Details 1 (username,contactNo,orderedDate,deliveryDate,Product Details(separated by pipe sign))
+john,9876543210,12-08-2019,14-08-2019,1|3
+Enter Order Details 2 (username,contactNo,orderedDate,deliveryDate,Product Details(separated by pipe sign))
+kiran,7894561230,15-09-2019,17-09-2019,2|4
+Enter Order Details 3 (username,contactNo,orderedDate,deliveryDate,Product Details(separated by pipe sign))
+john,9876543210,13-11-2019,14-11-2019,2|5
+Customer NameNo of Orders   
+john2              
+kiran1              
+Customer who placed more number of orders
+john
+Enter the product rate to be searched
+20000
+Name                     Brand                    ProductCategory          Color                    Cost                     
+Bosch 6.5Kg Washing MachinesBosch                    Laundry Room - AppliancesBlue                     20000 
+
