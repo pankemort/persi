@@ -72,7 +72,7 @@ map<string, vector<OrderDetail>> OrderDetail::getCustomerOrderMap(vector<OrderDe
 void OrderDetail::findCustomer(map<string, vector<OrderDetail>> customerOrderSummaryMap) {
     string topCustomer;
     int maxOrders = 0;
-    for (const auto& pair : customerOrderSummaryMap) {
+    for (auto& pair : customerOrderSummaryMap) {
         if (pair.second.size() > maxOrders) {
             maxOrders = pair.second.size();
             topCustomer = pair.first;

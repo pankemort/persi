@@ -52,7 +52,7 @@ int main() {
     map<string, vector<OrderDetail>> customerOrderMap = orderDetail.getCustomerOrderMap(orderDetails);
 
     cout << "Customer Name" << setw(15) << "No of Orders" << endl;
-    for (const auto& pair : customerOrderMap) {
+    for (auto& pair : customerOrderMap) {
         cout << pair.first << setw(15) << pair.second.size() << endl;
     }
 
