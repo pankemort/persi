@@ -1,6 +1,9 @@
 {
     "files.associations": {
+        "*.embeddedhtml": "html",
         "login,jsx": "javascriptreact",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "xstring": "cpp",
+        "map": "cpp"
     }
 }
