@@ -19,6 +19,7 @@ count_characters() {
 }
 
 # Function to count the number of vowels in the file
+
 count_vowels() {
     local vowels=$(grep -o -i '[aeiou]' input.txt | wc -l)
     echo "Number of vowels in the file: $vowels"

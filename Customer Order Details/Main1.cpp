@@ -36,7 +36,7 @@ int main() {
         getline(ss, deliveryDate, ',');
         getline(ss, productDetailsStr, ',');
 
-        vector<Product> products;
+        vector<Product> products; 
         stringstream productSS(productDetailsStr);
         string productIdStr;
         while (getline(productSS, productIdStr, '|')) {
