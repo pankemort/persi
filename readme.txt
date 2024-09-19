@@ -1,1 +1,1 @@
-kuch errors aare run karne pe debug karte hum tab tak tu bhi kar
+new question dekhd
