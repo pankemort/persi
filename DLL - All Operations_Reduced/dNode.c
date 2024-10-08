@@ -22,7 +22,7 @@ struct dnode* addatbeginning(struct dnode *head, int data) {
 
 struct dnode* deleteatbeginning(struct dnode *head) {
     if (head == NULL) {
-        printf("The list is empty no elements to delete.\n");
+        printf("The list is empty. No elements to delete.\n");
         return head;
     } else {
         struct dnode* temp = head;
@@ -70,14 +70,14 @@ void updateNode(struct dnode *head, int key, int newValue) {
     while (temp != NULL) {
         if (temp->data == key) {
             temp->data = newValue;
-            printf(" updated successfully.\n");
-            printf("elements in  doubly linked list are ");
+            printf("Element updated successfully.\n");
+            printf("The elements in the doubly linked list are ");
             displayList(head);
             return;
         }
         temp = temp->next;
     }
-    printf("Cannot update.\n");
+    printf("Element not found in the list. Cannot update.\n");
 }
 void displayList(struct dnode *head) {
     struct dnode *temp = head;

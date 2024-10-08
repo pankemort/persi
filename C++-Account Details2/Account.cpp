@@ -1,101 +1,198 @@
+// #include "Account.h"
+
+// #include <iomanip>
+// Account::Account()
+// {
+// }
+
+// Account::Account(string account_number, string account_type, string branch, double account_balance, string account_status, string customer_name)
+// {
+//     this->account_number = account_number;
+// 	this->account_type = account_type;
+// 	this->branch = branch;
+// 	this->account_balance = account_balance;
+// 	this->account_status = account_status;
+// 	this->customer_name = customer_name;
+// }
+
+// string Account::getAccount_number()
+// {
+// 	return account_number;
+// }
+
+// void Account::setAccount_number(string account_number)
+// {
+// 	this->account_number = account_number;
+// }
+
+// string Account::getAccount_type()
+// {
+// 	return account_type;
+// }
+
+// void Account::setAccount_type(string account_type)
+// {
+// 	this->account_type = account_type;
+// }
+
+// string Account::getBranch()
+// {
+// 	return branch;
+// }
+
+// void Account::setBranch(string branch)
+// {
+// 	this->branch = branch;
+// }
+
+// double Account::getAccount_balance()
+// {
+// 	return account_balance;
+// }
+
+// void Account::setAccount_balance(double account_balance)
+// {
+// 	this->account_balance = account_balance;
+// }
+
+// string Account::getAccount_status()
+// {
+// 	return account_status;
+// }
+
+// void Account::setAccount_status(string account_status)
+// {
+// 	this->account_status = account_status;
+// }
+
+// string Account::getCustomerName()
+// {
+// 	return customer_name;
+// }
+
+// void Account::setCustomerName(string customer_name)
+// {
+// 	this->customer_name = customer_name;
+// }
+
+// void Account::display(vector<Account> accountVector)
+// {
+// 	cout << "Account Details\n";
+// 	cout << setw(25) << left << "Account Number" << setw(25) << left << "Account Type" << setw(25) << left << "Branch" << setw(25) << left << "Account Balance" << setw(25) << left << "Account Status" << setw(25) << left << "Customer Name" << endl;
+
+// 	//Fill your code here. You can use the above setw formatting to avoid space issues
+// }
+
+// map<string, vector<Account>> Account::getCustomerAccountMap(vector<Account> accountVector)
+// {
+// 	map<string, vector<Account> > CustomerAccountMap;
+// 	//Fill your code here
+// 	return CustomerAccountMap;
+// }
+
+// void Account::findCustomer(map<string, vector<Account>> customerAccountSummaryMap)
+// {
+// 	//Fill your code here
+// }
+// vector<Account> Account::deleteAccount(vector<Account> accountVector)
+// {
+// 	//Fill your code here
+// 	return accountVector;
+// }
 #include "Account.h"
-
 #include <iomanip>
-Account::Account()
-{
-}
+#include <vector>
+#include <map>
 
-Account::Account(string account_number, string account_type, string branch, double account_balance, string account_status, string customer_name)
-{
+Account::Account() {}
+
+Account::Account(string account_number, string account_type, string branch, double account_balance, string account_status, string customer_name) {
     this->account_number = account_number;
-	this->account_type = account_type;
-	this->branch = branch;
-	this->account_balance = account_balance;
-	this->account_status = account_status;
-	this->customer_name = customer_name;
+    this->account_type = account_type;
+    this->branch = branch;
+    this->account_balance = account_balance;
+    this->account_status = account_status;
+    this->customer_name = customer_name;
 }
 
-string Account::getAccount_number()
-{
-	return account_number;
+string Account::getAccount_number() {
+    return account_number;
 }
 
-void Account::setAccount_number(string account_number)
-{
-	this->account_number = account_number;
+void Account::setAccount_number(string account_number) {
+    this->account_number = account_number;
 }
 
-string Account::getAccount_type()
-{
-	return account_type;
+string Account::getAccount_type() {
+    return account_type;
 }
 
-void Account::setAccount_type(string account_type)
-{
-	this->account_type = account_type;
+void Account::setAccount_type(string account_type) {
+    this->account_type = account_type;
 }
 
-string Account::getBranch()
-{
-	return branch;
+string Account::getBranch() {
+    return branch;
 }
 
-void Account::setBranch(string branch)
-{
-	this->branch = branch;
+void Account::setBranch(string branch) {
+    this->branch = branch;
 }
 
-double Account::getAccount_balance()
-{
-	return account_balance;
+double Account::getAccount_balance() {
+    return account_balance;
 }
 
-void Account::setAccount_balance(double account_balance)
-{
-	this->account_balance = account_balance;
+void Account::setAccount_balance(double account_balance) {
+    this->account_balance = account_balance;
 }
 
-string Account::getAccount_status()
-{
-	return account_status;
+string Account::getAccount_status() {
+    return account_status;
 }
 
-void Account::setAccount_status(string account_status)
-{
-	this->account_status = account_status;
+void Account::setAccount_status(string account_status) {
+    this->account_status = account_status;
 }
 
-string Account::getCustomerName()
-{
-	return customer_name;
+string Account::getCustomerName() {
+    return customer_name;
 }
 
-void Account::setCustomerName(string customer_name)
-{
-	this->customer_name = customer_name;
+void Account::setCustomerName(string customer_name) {
+    this->customer_name = customer_name;
 }
 
-void Account::display(vector<Account> accountVector)
-{
-	cout << "Account Details\n";
-	cout << setw(25) << left << "Account Number" << setw(25) << left << "Account Type" << setw(25) << left << "Branch" << setw(25) << left << "Account Balance" << setw(25) << left << "Account Status" << setw(25) << left << "Customer Name" << endl;
-
-	//Fill your code here. You can use the above setw formatting to avoid space issues
+void Account::display(vector<Account> accountVector) {
+    cout << "Account Details\n";
+    cout << setw(25) << left << "Account Number" << setw(25) << left << "Account Type" << setw(25) << left << "Branch" << setw(25) << left << "Account Balance" << setw(25) << left << "Account Status" << setw(25) << left << "Customer Name" << endl;
+    for (Account account : accountVector) {
+        cout << setw(25) << left << account.getAccount_number() << setw(25) << left << account.getAccount_type() << setw(25) << left << account.getBranch() << setw(25) << left << account.getAccount_balance() << setw(25) << left << account.getAccount_status() << setw(25) << left << account.getCustomerName() << endl;
+    }
 }
 
-map<string, vector<Account>> Account::getCustomerAccountMap(vector<Account> accountVector)
-{
-	map<string, vector<Account> > CustomerAccountMap;
-	//Fill your code here
-	return CustomerAccountMap;
+map<string, vector<Account>> Account::getCustomerAccountMap(vector<Account> accountVector) {
+    map<string, vector<Account>> customerAccountMap;
+    for (Account account : accountVector) {
+        customerAccountMap[account.getCustomerName()].push_back(account);
+    }
+    return customerAccountMap;
 }
 
-void Account::findCustomer(map<string, vector<Account>> customerAccountSummaryMap)
-{
-	//Fill your code here
+void Account::findCustomer(map<string, vector<Account>> customerAccountSummaryMap) {
+    for (auto it = customerAccountSummaryMap.begin(); it != customerAccountSummaryMap.end(); ++it) {
+        if (it->second.size() > 1) {
+            cout << it->first << endl;
+        }
+    }
 }
-vector<Account> Account::deleteAccount(vector<Account> accountVector)
-{
-	//Fill your code here
-	return accountVector;
+
+vector<Account> Account::deleteAccount(vector<Account> accountVector) {
+    vector<Account> updatedAccounts;
+    for (Account account : accountVector) {
+        if (account.getAccount_status() != "InActive") {
+            updatedAccounts.push_back(account);
+        }
+    }
+    return updatedAccounts;
 }
