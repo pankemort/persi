@@ -166,33 +166,32 @@ void Account::setCustomerName(string customer_name) {
 void Account::display(vector<Account> accountVector) {
     cout << "Account Details\n";
     cout << setw(25) << left << "Account Number" << setw(25) << left << "Account Type" << setw(25) << left << "Branch" << setw(25) << left << "Account Balance" << setw(25) << left << "Account Status" << setw(25) << left << "Customer Name" << endl;
-    for (Account account : accountVector) {
-        cout << setw(25) << left << account.getAccount_number() << setw(25) << left << account.getAccount_type() << setw(25) << left << account.getBranch() << setw(25) << left << account.getAccount_balance() << setw(25) << left << account.getAccount_status() << setw(25) << left << account.getCustomerName() << endl;
-    }
+   
 }
 
 map<string, vector<Account>> Account::getCustomerAccountMap(vector<Account> accountVector) {
     map<string, vector<Account>> customerAccountMap;
-    for (Account account : accountVector) {
+    for (const auto& account : accountVector) {
         customerAccountMap[account.getCustomerName()].push_back(account);
     }
     return customerAccountMap;
 }
 
 void Account::findCustomer(map<string, vector<Account>> customerAccountSummaryMap) {
-    for (auto it = customerAccountSummaryMap.begin(); it != customerAccountSummaryMap.end(); ++it) {
-        if (it->second.size() > 1) {
-            cout << it->first << endl;
+    cout << "Customers holding more accounts:\n";
+    for (const auto& entry : customerAccountSummaryMap) {
+        if (entry.second.size() > 1) {
+            cout << entry.first << endl;
         }
     }
 }
 
 vector<Account> Account::deleteAccount(vector<Account> accountVector) {
-    vector<Account> updatedAccounts;
-    for (Account account : accountVector) {
+    vector<Account> activeAccounts;
+    for (const auto& account : accountVector) {
         if (account.getAccount_status() != "InActive") {
-            updatedAccounts.push_back(account);
+            activeAccounts.push_back(account);
         }
     }
-    return updatedAccounts;
+    return activeAccounts;
 }

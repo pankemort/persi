@@ -74,7 +74,6 @@
         }
     }
 
-<<<<<<< HEAD
     map<string, vector<Account> > Account::getCustomerAccountMap(vector<Account> accountVector) {
         map<string, vector<Account> > customerAccountMap;
         
@@ -112,41 +111,3 @@
         }
         return updatedAccounts;
     }
-=======
-	//Fill your code here. You can use the above setw formatting to avoid space issues
-	    for (auto& account : accountVector) {
-        cout << setw(25) << left << account.getAccount_number() << setw(25) << left << account.getAccount_type() << setw(25) << left << account.getBranch() << setw(25) << left << account.getAccount_balance() << setw(25) << left << account.getAccount_status() << setw(25) << left << account.getCustomerName() << endl;
-    }
-}
-
-map<string, vector<Account>> Account::getCustomerAccountMap(vector<Account> accountVector)
-{
-	map<string, vector<Account> > CustomerAccountMap;
-	//Fill your code here
-	    for (auto& account : accountVector) {
-        CustomerAccountMap[account.getCustomerName()].push_back(account);
-    }
-	return CustomerAccountMap;
-}
-
-void Account::findCustomer(map<string, vector<Account>> customerAccountSummaryMap)
-{
-	//Fill your code here
-	    for (auto& pair : customerAccountSummaryMap) {
-        if (pair.second.size() > 1) {
-            cout << pair.first << endl;
-        }
-    }
-}
-vector<Account> Account::deleteAccount(vector<Account> accountVector)
-{
-	//Fill your code here
-	vector<Account> updatedVector;
-    for (auto& account : accountVector) {
-        if (account.getAccount_status() != "InActive") {
-            updatedVector.push_back(account);
-        }
-    }
-    return updatedVector;
-}
->>>>>>> 4b3b90dc6cde8a1a7eee8723e1a3b916f41db4a6

@@ -1,3 +1,64 @@
+#!/bin/bash
+
+display_line_number() {
+    local line_number=$1
+    sed -n "${line_number}p" input1.txt
+}
+
+compare_files() {
+    if cmp -s input1.txt input2.txt; then
+        echo "Two file contents are identical"
+    else
+        echo "Two file contents are different"
+    fi
+}
+
+find_frequency_of_each_word() {
+    tr -c '[:alnum:]' '[\n*]' < input1.txt | grep -v '^$' | sort | uniq -c | sort -k2
+}
+
+extract_substring() {
+    local position=$1
+    local length=$2
+    while IFS= read -r line; do
+        echo "${line:$position:$length}"
+    done < input1.txt
+}
+
+while true; do
+    echo "1. Display the specific line in the file"
+    echo "2. Compare 2 files"
+    echo "3. Find the frequency of each word in the file"
+    echo "4. Extract substring from specific position and length"
+    echo "5. Exit"
+    read -p "Enter your Choice(1-5): " choice
+
+    case $choice in
+        1)
+            read -p "Enter the line number to be displayed: " line_number
+            display_line_number $line_number
+            ;;
+        2)
+            compare_files
+            ;;
+        3)
+            find_frequency_of_each_word
+            ;;
+        4)
+            read -p "Enter the position: " position
+            read -p "Enter the substring length to be extracted: " length
+            extract_substring $position $length
+            ;;
+        5)
+            echo "Exiting"
+            break
+            ;;
+        *)
+            echo "Invalid choice, please try again."
+            ;;
+    esac
+done
+
 Write a program to perform below operations using functions.
 i. Display the specific line in the file (input1.txt)
 ii. Compare 2 files (input1.txt and input2.txt)
