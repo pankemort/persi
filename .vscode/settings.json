@@ -1,7 +1,7 @@
 {
     "files.associations": {
-        "*.embeddedhtml": "html",
         "login,jsx": "javascriptreact",
+        "*.embeddedhtml": "html",
         "sstream": "cpp",
         "xstring": "cpp",
         "map": "cpp",
@@ -11,6 +11,8 @@
         "typeinfo": "cpp",
         "iostream": "cpp",
         "xmemory": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "iomanip": "cpp",
+        "string": "cpp"
     }
 }
