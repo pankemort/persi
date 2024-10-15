@@ -13,6 +13,7 @@
         "xmemory": "cpp",
         "ios": "cpp",
         "iomanip": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "list": "c"
     }
 }
