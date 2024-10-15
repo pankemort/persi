@@ -1,0 +1,12 @@
+This is a test file.
+Bash scripting is fun.
+Learning to code is rewarding.
+Test your skills and improve.
+Bash is very powerful and flexible.
+The test file contains multiple lines.
+Let's find the shortest and longest lines.
+Coding is a skill.
+Test your code frequently.
+Repeat, repeat, and repeat again for mastery.
+Skill comes with practice.
+Bash scripting makes automation easy.

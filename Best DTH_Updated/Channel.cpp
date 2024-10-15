@@ -73,4 +73,17 @@ void Channel::displayChannelDetails() {
 void Channel::deleteChannelBasedOnHD(list<Channel> channelList, bool hd)
 {
 	//Fill your code here
+	bool allHD = true;
+    for (auto it = channelList.begin(); it != channelList.end();) {
+        if (it->getHd_quality() != hd) {
+            cout << it->getName() << endl;
+            it = channelList.erase(it);
+            allHD = false;
+        } else {
+            ++it;
+        }
+    }
+    if (allHD) {
+        cout << "All channels in this package are in hd quality" << endl;
+    }
 }

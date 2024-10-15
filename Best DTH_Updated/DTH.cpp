@@ -55,4 +55,22 @@ void DTH::setPackageList(list<Package> packageList)
 void DTH::getBestDTH(map<string, Package> packageMap)
 {
 	//Fill your code here
+    string bestDTH;
+    double minCostPerChannel = DBL_MAX;
+
+    for (auto& package : packageMap) {
+        if (package.second.getType() == "AllinOne") {
+            double costPerChannel = package.second.getCost() / package.second.getChannelList().size();
+            if (costPerChannel < minCostPerChannel) {
+                minCostPerChannel = costPerChannel;
+                bestDTH = package.second.getDth();
+            }
+        }
+    }
+
+    if (!bestDTH.empty()) {
+        cout << "The best DTH for everyone is " << bestDTH << endl;
+    } else {
+        cout << "No AllinOne packages found" << endl;
+    }
 }
